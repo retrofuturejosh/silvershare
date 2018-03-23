@@ -128,20 +128,20 @@ Important Feature for concept:
 			End to end
 				- mock database, http request fired from the front end
 				
-	Requesting use
-			test
-				Frontend: button that called function, sent correct form data
-					form had all the necessary fields
-					sent a post request
-				API: post request 
-					made a call to update db
-					updating the exchange model
-				DB: create a new exchange
-					-assigns a lender
-					-assigns a borrower
-					- tool
-					- date of exchange
-					- planned date of return
+Requesting use
+    test
+      Frontend: button that called function, sent correct form data
+        form had all the necessary fields
+        sent a post request
+      API: post request 
+        made a call to update db
+        updating the exchange model
+      DB: create a new exchange
+        -assigns a lender
+        -assigns a borrower
+        - tool
+        - date of exchange
+        - planned date of return
 			
 
 Stretch
