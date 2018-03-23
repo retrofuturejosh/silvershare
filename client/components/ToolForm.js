@@ -60,8 +60,8 @@ class ToolForm extends Component {
         <div>
           {this.state.recentlyAdded.name ? (
             <div id="item-added">
-              Just added your 
-              {this.state.recentlyAdded.name}
+               
+              {`Just added your ${this.state.recentlyAdded.name}`}
             </div>
           ) : (null)}
         </div>
