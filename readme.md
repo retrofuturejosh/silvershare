@@ -13,5 +13,6 @@ I created an API route to post a new tool, which updates the database
 TO RUN THE APP
 
 npm install
+create DB 'silvershare'
 npm run start-dev
 server should be running on localhost:3000

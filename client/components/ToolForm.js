@@ -7,7 +7,8 @@ class ToolForm extends Component {
     this.state = {
       tool: "",
       description: "",
-      features: ""
+      features: "",
+      recentlyAdded: {}
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -28,6 +29,7 @@ class ToolForm extends Component {
     };
     this.setState({ tool: "", description: "", features: "" });
     axios.post("/api/tool", data)
+    .then(res => this.setState({recentlyAdded: res.data}))
   }
 
   render() {
@@ -55,6 +57,14 @@ class ToolForm extends Component {
           />
           <input id="tool-form-submit" type="submit" />
         </form>
+        <div>
+          {this.state.recentlyAdded.name ? (
+            <div>
+              Just added your 
+              {this.state.recentlyAdded.name}
+            </div>
+          ) : (null)}
+        </div>
       </div>
     );
   }
