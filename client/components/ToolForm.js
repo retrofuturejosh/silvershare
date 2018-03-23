@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios"
+import axios from "axios";
 
 class ToolForm extends Component {
   constructor(props) {
@@ -28,8 +28,9 @@ class ToolForm extends Component {
       features: this.state.features
     };
     this.setState({ tool: "", description: "", features: "" });
-    axios.post("/api/tool", data)
-    .then(res => this.setState({recentlyAdded: res.data}))
+    axios
+      .post("/api/tool", data)
+      .then(res => this.setState({ recentlyAdded: res.data }));
   }
 
   render() {
@@ -60,10 +61,9 @@ class ToolForm extends Component {
         <div>
           {this.state.recentlyAdded.name ? (
             <div id="item-added">
-               
               {`Just added your ${this.state.recentlyAdded.name}`}
             </div>
-          ) : (null)}
+          ) : null}
         </div>
       </div>
     );
