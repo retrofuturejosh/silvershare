@@ -59,7 +59,7 @@ class ToolForm extends Component {
         </form>
         <div>
           {this.state.recentlyAdded.name ? (
-            <div>
+            <div id="item-added">
               Just added your 
               {this.state.recentlyAdded.name}
             </div>
